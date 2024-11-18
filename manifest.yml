@@ -15,7 +15,7 @@ env:
       secret_key: my-sa-secret
       key_file: my-sa.json
       table_config_path: /data-domain-pipelines/table_config.yml
-      script_path: /data-domain-pipelines/dbt_command_loop.sh
+      script_path: /data-domain-pipelines/dbt_command.sh
       slack_channels: ['#my-pipelines-dag-notifications']
   preprod-ca:
       src_project: my-preprod-project
@@ -24,8 +24,8 @@ env:
       service_account: my-sa
       secret_key: my-sa-secret
       key_file: my-sa.json
-      table_config_path: /data-domain-pipelines/preprod_table_config.yml
-      script_path: /data-domain-pipelines/dbt_command_loop.sh
+      table_config_path: /data-domain-pipelines/table_config.yml
+      script_path: /data-domain-pipelines/dbt_command.sh
       slack_channels: [ '#my-pipelines-dag-notifications' ]
   prod-ca:
       src_project: my-prod-project
@@ -35,5 +35,5 @@ env:
       secret_key: my-sa-prod-secret
       key_file: my-sa-prod.json
       table_config_path: /data-domain-pipelines/table_config.yml
-      script_path: /data-domain-pipelines/dbt_command_loop.sh
+      script_path: /data-domain-pipelines/dbt_command.sh
       slack_channels: ['#my-pipelines-dag-notifications']

@@ -22,5 +22,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
     dap:
-        enabled: true
-        materialized: table
+        preprod:
+            +enabled: "{{ target.name == 'preprod' }}"
+        prod:
+            +enabled: "{{ target.name == 'prod' }}"
