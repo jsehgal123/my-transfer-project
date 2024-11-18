@@ -4,11 +4,13 @@ This is **solved** dbt repo for interview purpose
 
 Please provide answers for these following questions:
 * What are each of the files for?
+
 **We are basically running some of the SQLs specified in the models against different tables.** 
 
 * How to run this project and what results we expect.
 
 **For preprod**
+
 Run script
 
 bash dbt_run_single.sh table_config.yml preprod
@@ -19,6 +21,7 @@ dbt run --profiles-dir /data-domain-pipelines \
 --target preprod-ca_
 
 **For Prod**
+
 Run script
 bash dbt_run_single.sh unified_config.yml prod
 
@@ -28,7 +31,7 @@ dbt run --profiles-dir /data-domain-pipelines \
 --project-dir /data-domain-pipelines/my_transfer/prod \
 --target prod-ca_
 
-List some of this solution's design problems and compare to dbt projects best practices.
+**List some of this solution's design problems and compare to dbt projects best practices.**
 
 
 1. Models structure could be further improved and normalised. I see duplicate queries
